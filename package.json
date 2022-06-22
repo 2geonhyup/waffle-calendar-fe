@@ -1,6 +1,7 @@
 {
   "name": "waffle_calendar",
   "version": "0.1.0",
+  "proxy":"http://localhost:3005",
   "private": true,
   "dependencies": {
     "@fullcalendar/core": "^5.11.0",
@@ -12,6 +13,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
     "moment": "^2.29.3",
     "react": "^18.1.0",
     "react-calendar": "^3.7.0",

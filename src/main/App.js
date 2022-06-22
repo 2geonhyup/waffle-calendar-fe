@@ -1,17 +1,27 @@
 import "../App.css";
-import appData from "../jsonData/appData.json";
+// import appData from "../jsonData/appData.json";
 
-import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import CalendarList from "./CalendarList";
-import dummyCalendarList from "../dummy";
 import LoginBtn from "../component/LoginBtn";
 import CalendarBtn from "./CalendarBtn";
+import axios from "axios";
 
 //이 부분을 get요청으로 바꾸면 됨
 const setData = async () => {
-  let userName = "";
+  let userName = "loc";
+  let response;
 
+  // get 요청
+  try {
+    response = await axios.get("/api/");
+  } catch {
+    console.log("get failed!");
+  }
+
+  const appData = response.data;
+  console.log(appData);
   const calendarList = appData.masterCal_list;
   if ("profile" in appData) {
     userName = appData.profile.displayName;

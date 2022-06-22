@@ -1,10 +1,8 @@
-
-
 {
   "eventList": {
     "kind": "calendar#events",
     "etag": "\"p33s8fp7hnqovg0g\"",
-    "summary": "Waffle_0",
+    "summary": "고려대 학사 일정",
     "description": "고려대학교 학사 일정",
     "updated": "2022-06-16T07:53:16.971Z",
     "timeZone": "Asia/Seoul",
@@ -141,7 +139,7 @@
     ]
   },
   "calName": "Waffle_0",
-  "hashTags": null,
+  "hashTags": ["수강신청", "시험", "안전교육"],
   "profile": {
     "provider": "google",
     "sub": "115987064282754163674",

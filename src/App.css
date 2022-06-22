@@ -121,6 +121,28 @@ input[type="search"]::-webkit-search-results-decoration {
   align-items: center;
 }
 
+.calendar-item:hover {
+  width: 145px;
+  height: 145px;
+  margin: 20px;
+  background-color: black;
+  border: 1.5px solid black;
+  border-radius: 22px;
+  
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-item:hover .item-title {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+
 .calendar-item .item-title {
   font-size: 15px;
   padding: 10px;
@@ -130,6 +152,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .calendar-item .follow-count-box {
+  background-color: transparent;
   font-size: 12px;
   position: absolute;
   bottom: 16px;
@@ -138,8 +161,13 @@ input[type="search"]::-webkit-search-results-decoration {
   align-items: center;
 }
 
+.calendar-item:hover .follow-count {
+  background-color: transparent;
+}
+
 .user-logo {
   margin-right: 5px;
+  background-color: transparent;
 }
 
 /* calendar page 관련 */
@@ -153,13 +181,13 @@ input[type="search"]::-webkit-search-results-decoration {
   position: absolute;
   top: 50px;
   left: 50px;
-  width: 145px;
-  height:50px;
+  padding: 0 15px;
+  height: 55px;
   background-color: white;
   border: 1px solid black;
   border-radius: 25px;
   text-align: center;
-  line-height: 50px;
+  line-height: 55px;
   font-size: 17px;
   font-weight: 600;
 }
