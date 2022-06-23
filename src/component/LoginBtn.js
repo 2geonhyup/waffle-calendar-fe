@@ -1,12 +1,16 @@
 import React from "react";
-import { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const LoginBtn = ({ loginState }) => {
-  function loginOrLogout() {
-    console.log("login logout");
+  async function loginOrLogout() {
+    // get 요청
+    try {
+      await axios.get("http://localhost:3005/auth/googlelogin/");
+    } catch {
+      console.log("app.js get failed!");
+    }
   }
-
 
   return (
     <div className="menu-div">

@@ -15,9 +15,9 @@ const setData = async () => {
 
   // get 요청
   try {
-    response = await axios.get("/api/");
+    response = await axios.get("http://localhost:3005/");
   } catch {
-    console.log("get failed!");
+    console.log("app.js get failed!");
   }
 
   const appData = response.data;
