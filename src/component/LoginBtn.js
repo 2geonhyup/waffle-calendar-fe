@@ -6,7 +6,7 @@ const LoginBtn = ({ loginState }) => {
   async function loginOrLogout() {
     // get 요청
     try {
-      await axios.get("http://localhost:3005/auth/googlelogin/");
+      await axios.get("http://localhost:3005/auth/googlelogin");
     } catch {
       console.log("app.js get failed!");
     }

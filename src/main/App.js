@@ -10,7 +10,7 @@ import axios from "axios";
 
 //이 부분을 get요청으로 바꾸면 됨
 const setData = async () => {
-  let userName = "loc";
+  let userName = "";
   let response;
 
   // get 요청
@@ -21,10 +21,12 @@ const setData = async () => {
   }
 
   const appData = response.data;
+  console.log(response);
   console.log(appData);
   const calendarList = appData.masterCal_list;
   if ("profile" in appData) {
     userName = appData.profile.displayName;
+    console.log(userName);
   }
 
   return { userName: userName, calendarList: calendarList };
@@ -41,6 +43,7 @@ function App() {
   useEffect(() => {
     async function ex() {
       const data = await setData();
+      console.log(data.userName);
       if (data.userName === "") {
         setLoginState("로그인");
       } else {
